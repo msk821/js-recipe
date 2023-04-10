@@ -1,7 +1,34 @@
-// 練習問題 １
-const plus1 = function (x) {
-  return x + 1
+/*const number = 24
+
+if (number % 3 === 0) {
+  console.log(number + "!!!!!!!")
+} else {
+  console.log(number)
+}*/
+
+/*const number = 24
+
+for (let i = 1; i <= number; i++) {
+  if (i % 3 === 0) {
+    console.log(i + "!!!!!!")
+  } else {
+    console.log(i)
+  }
+}*/
+
+const genkiFunction = function (number) {
+  for (let i = 1; i <= number; i++) {
+    if (i % 3 === 0) {
+      console.log(i + "!!!!!!!!")
+    } else {
+      console.log(i)
+    }
+  }
 }
+// 練習問題 １
+//const plus1 = function (x) {
+//  return x + 1
+//}
 // 関数名:
 // 引数:
 // 返り値:
