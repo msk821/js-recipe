@@ -16,21 +16,22 @@ figure.onclick = function () {
 }
 */
 //発展問題1
-
+/*
 figure.onmouseover = function () {
   figure.classList.toggle("rounded")
 }
+*/
 
 //発展問題2
-/*
+
 figure.onclick = function () {
   if (figure.classList.contains("square")) {
     figure.classList.add("rounded")
-  } else if (figure.classList.contains("square", "rounded")) {
+  } else if (figure.classList.contains("square" && "rounded")) {
     figure.classList.remove("rounded")
     figure.classList.add("triangle")
   } else {
+    figure.classList.remove("triangle")
     figure.classList.add("square")
   }
 }
-*/
