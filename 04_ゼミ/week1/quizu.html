@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>クイズ！</h1>
+    <div>Q.二人が共通のバイトはなんでしょう？</div>
+    <div>正解は二つあります！</div>
+    <button id="button1">ゴンチャ</button>
+    <button id="button2">蕎麦屋</button>
+    <button id="button3">居酒屋</button>
+    <button id="button4">東京ドーム</button>
+    <img
+      id="img"
+      src="https://www.t3design.co.jp/data/blog/130/611dffc01122a.png"
+    />
+    <div id="answer"></div>
+    <script>
+      const button1 = document.getElementById("button1")
+      const button2 = document.getElementById("button2")
+      const button3 = document.getElementById("button3")
+      const button4 = document.getElementById("button4")
+      const answer = document.getElementById("answer")
+      const img = document.getElementById("img")
+
+      button1.onclick = () => {
+        answer.textContent = "不正解"
+        img.src =
+          "https://cdn-ak.f.st-hatena.com/images/fotolife/N/Newdonut/20220412/20220412213306.png"
+      }
+      button2.onclick = () => {
+        answer.textContent = "正解"
+        img.src =
+          "https://www.rbbtoday.com/imgs/p/RqJIzsl7cmxG8-cARbeaqilNLEDQQ0JFREdG/510534.jpg"
+      }
+      button3.onclick = () => {
+        answer.textContent = "不正解"
+        img.src =
+          "https://cdn-ak.f.st-hatena.com/images/fotolife/N/Newdonut/20220412/20220412213306.png"
+      }
+      button4.onclick = () => {
+        answer.textContent = "正解"
+        img.src =
+          "https://www.rbbtoday.com/imgs/p/RqJIzsl7cmxG8-cARbeaqilNLEDQQ0JFREdG/510534.jpg"
+      }
+
+      console.dir(document)
+    </script>
+  </body>
+</html>

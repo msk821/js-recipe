@@ -25,8 +25,8 @@ for (let i = 1; i <= number; i++) {
     }
   }
 }*/
-
-/*const FizzBuzz = function (number) {
+/*
+const FizzBuzz = function (number) {
   for (let i = 1; i <= number; i++) {
     if (i % 15 === 0) {
       console.log("FizzBuzz")
@@ -48,8 +48,8 @@ const genkifun = function (number) {
       console.log(i)
     }
   }
-}*/
-
+}
+*/
 /*let count = 0
 
 const countUp = function () {
