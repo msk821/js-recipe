@@ -10,26 +10,37 @@
     <h2>メモアプリ</h2>
     <input type="text" id="memo-input" />
     <button id="add-button">保存</button>
+    <button id="sort-button">並び替え</button>
     <div id="memo-container"></div>
     <script>
       const memoInput = document.getElementById("memo-input")
       const addButton = document.getElementById("add-button")
       const memoContainer = document.getElementById("memo-container")
+      const sortbutton = document.getElementById("sort-button")
 
       let memos = []
 
       addButton.onclick = function () {
         memos.push(memoInput.value)
+        // ローカルストレージのmemosキーにJSONにしたmemosを保存する。
+        localStorage.memos = JSON.stringify(memos)
 
         console.log(memos)
         memoContainer.textContent = " "
 
-        for (let i = 0; i < memos.length; i++) {
-          const div = document.createElement("div")
-          div.textContent = memos[i]
-          memoContainer.append(div)
-        }
+        if (localStorage.memos) {
+          // ローカルストレージのmemosキーからJSONを読み込む。
+          const memosJson = localStorage.memos
+          // JSON.parseで配列にして、memosを更新する。
+          memos = JSON.parse(memosJson)
 
+          // ページ読み込み時に、配列の内容をブラウザに反映する。
+          for (let i = 0; i < memos.length; i++) {
+            const div = document.createElement("div")
+            div.textContent = memos[i]
+            memoContainer.append(div)
+          }
+        }
         /*
         // 取得した内容をDOMに反映する
         // 1. div をJavaScriptで新しく作る
@@ -39,6 +50,14 @@
         // 3. 作成したdivを<div id="memo-container"></div>の子要素に追加する
         memoContainer.append(div)
         */
+      }
+
+      sortbutton.onclick = function () {
+        memos.sort()
+        memoContainer.textContent = ""
+        const div = document.createElement("div")
+        div.textContent = memos
+        memoContainer.append(div)
       }
     </script>
   </body>
